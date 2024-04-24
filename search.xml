@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>新的 Toads Blog</title>
+      <link href="/2024/04/24/new-blog/"/>
+      <url>/2024/04/24/new-blog/</url>
+      
+        <content type="html"><![CDATA[<h1 id="三个月不见终于变力"><a href="#三个月不见终于变力" class="headerlink" title="三个月不见终于变力"></a>三个月不见终于变力</h1><p>本次的 Toads Blog 直接使用 butterfly 为主题。原因是fluid主题基本上不能很好的在termu上。</p><h1 id="很多种看我的方式"><a href="#很多种看我的方式" class="headerlink" title="很多种看我的方式"></a>很多种看我的方式</h1><p>全平台同名toad114514，除开下面所列</p><ul><li>B站 狗头均</li><li>抖音 保护狗头de阿巴阿巴鸭<br>当然还有我的 <a href="https://github.com/toad114514">Github</a> 和 <a href="https://gitee.com/toadstool">Gitee</a></li></ul><h1 id="尽量更新"><a href="#尽量更新" class="headerlink" title="尽量更新"></a>尽量更新</h1><p>基本保持每周一更，有学业的好吧，且不一定是科技类文章，还有可能是游戏工略等文章。暑假可以多更一点点。</p><h1 id="说完了-睡觉"><a href="#说完了-睡觉" class="headerlink" title="说完了 睡觉"></a>说完了 睡觉</h1><p><img src="https://www.freeimg.cn/i/2024/01/12/65a020d54a40f.gif" alt="摸李这停.gif"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 科技 </tag>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>你好逝界</title>
+      <link href="/2024/04/23/hello-world/"/>
+      <url>/2024/04/23/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>! 这是你的最早的文章。 点击 <a href="https://hexo.io/docs/">文档</a> 查看更多信息. 如果你在使用 Hexo 时出现了 Bugsssssssssss, 你可以在 <a href="https://hexo.io/docs/troubleshooting.html">这里</a> 找到解决方案或者去 <a href="https://github.com/hexojs/hexo/issues">GitHub</a> 提交 issues.</p><h2 id="快速失败（不是"><a href="#快速失败（不是" class="headerlink" title="快速失败（不是"></a>快速失败（不是</h2><h3 id="新建文章"><a href="#新建文章" class="headerlink" title="新建文章"></a>新建文章</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>更多信息请看 <a href="https://hexo.io/docs/writing.html">写作</a></p><h3 id="运行服务坤"><a href="#运行服务坤" class="headerlink" title="运行服务坤"></a>运行服务坤</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>更多信息请看: <a href="https://hexo.io/docs/server.html">服务器</a></p><h3 id="创建静态页面"><a href="#创建静态页面" class="headerlink" title="创建静态页面"></a>创建静态页面</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>更多信息请看: <a href="https://hexo.io/docs/generating.html">创建静态页面</a></p><h3 id="部署到网站"><a href="#部署到网站" class="headerlink" title="部署到网站"></a>部署到网站</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>更多请看: <a href="https://hexo.io/docs/one-command-deployment.html">部署</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Teux 搭建 nginx 服务器</title>
+      <link href="/2024/01/12/termux-nginx/"/>
+      <url>/2024/01/12/termux-nginx/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p><img src="https://www.freeimg.cn/i/2024/01/12/65a01271aa76d.jpg" alt="菜鸟教程对 Nginx的描述"><br>nginx的风还是吹到了，<strong>Termux!<strong>不是Termux没明星，而是</strong>Termux全明星</strong>“”(指装irc等服务器和python等)!不是Termux不出手，而是出手<strong>没对手</strong>！Termux大舞台，有才你就来(</p><p>今天教你们怎么安装<strong>Ngnix</strong>！<br>不是ksweb用不起，而是真正的nginx有性价比！原先无root也可以使用的ksweb由于自由度有点差(不能装插件上去)，所以真正的nginx才能真正体验到nginx！</p><p><img src="https://www.freeimg.cn/i/2024/01/12/65a01273ef65f.jpg" alt="termux,启动！"><br><img src="https://www.freeimg.cn/i/2024/01/12/65a012735c636.jpg" alt="作者手机配置及proot环境配置"><br>以后都有这台”战神A5”来部署一些东西了。</p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><h2 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h2><p>应用的安装就像是生猴子，受精卵要在子宫里发育，子宫就是环境，受精卵就是nginx安装包，So：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt install gcc libpcre3-dev zlib1g-dev openssl</span><br></pre></td></tr></table></figure><p>先装一些依赖，没有没有怎么部署nginx？<br>gcc是运行环境，pcre给nginx提供正则表达式，zlib依赖解压包<br>pcre用于http的正则表达式里<br><strong>别忘了你的openssl！</strong></p><h2 id="下载nginx"><a href="#下载nginx" class="headerlink" title="下载nginx"></a>下载nginx</h2><p><strong>这一步我们一步完成，要慢慢来的请放Sweet Dreams，完成后再停止播放</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> /usr/local/nginx</span><br><span class="line"><span class="built_in">cd</span> /usr/local/nginx</span><br><span class="line">wget https://nginx.org/download/nginx-1.24.0.tar.gz</span><br><span class="line">tar -zxvf nginx-1.24.0.tar.gz</span><br></pre></td></tr></table></figure><h2 id="安装时间！"><a href="#安装时间！" class="headerlink" title="安装时间！"></a>安装时间！</h2><p>由于tar把文件解压到了nginx-1.24.0文件夹，所以<strong>要先进行cd</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nginx-1.24.0</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br></pre></td></tr></table></figure><p>安装阶段，我的手机非常吃力，<strong>战神A5不行力</strong><br>也是特别的卡，我甚至一边装nginx一边听音乐<br>由于make原因，<strong>我tnnd也没办法</strong><br><img src="https://www.freeimg.cn/i/2024/01/12/65a020d5ced58.jpg" alt="完成 configure 后的终端"></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">objs/src/http/modules/ngx_http_upstream_random_module.o \</span><br><span class="line">objs/src/http/modules/ngx_http_upstream_keepalive_module.o \</span><br><span class="line">objs/src/http/modules/ngx_http_upstream_zone_module.o \</span><br><span class="line">objs/ngx_modules.o \</span><br><span class="line">-lcrypt -lpcre2-8 -lz \</span><br><span class="line">-Wl,-E</span><br><span class="line">sed -e <span class="string">&quot;s|%%PREFIX%%|/usr/local/nginx|&quot;</span> \</span><br><span class="line">        -e <span class="string">&quot;s|%%PID_PATH%%|/usr/local/nginx/logs/nginx.pid|&quot;</span> \</span><br><span class="line">        -e <span class="string">&quot;s|%%CONF_PATH%%|/usr/local/nginx/conf/nginx.conf|&quot;</span> \</span><br><span class="line">        -e <span class="string">&quot;s|%%ERROR_LOG_PATH%%|/usr/local/nginx/logs/error.log|&quot;</span> \</span><br><span class="line">        &lt; man/nginx.8 &gt; objs/nginx.8</span><br><span class="line">make[1]: 离开目录“/usr/local/nginx/nginx-1.24.0”</span><br><span class="line">root@localhost:/usr/local/nginx/nginx-1.24.0<span class="comment">#</span></span><br></pre></td></tr></table></figure><p>make指令用了<strong>好几分钟力</strong>，还有make install，草<br>还好make install使用时间不多</p><h1 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h1><h2 id="配置工具"><a href="#配置工具" class="headerlink" title="配置工具"></a>配置工具</h2><p>我们需要：</p><ul><li>一个终端进程</li><li>Vim&#x2F;Vi&#x2F;Nano，没有就装</li></ul><h2 id="配置nginx"><a href="#配置nginx" class="headerlink" title="配置nginx"></a>配置nginx</h2><p>去吧，我的<em>Vim</em>！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/conf/nginx.conf</span><br></pre></td></tr></table></figure><p><img src="https://www.freeimg.cn/i/2024/01/12/65a022dad6fdc.jpg" alt="ngnx.conf"><br>配置只需修改 listen 项和 server_name 即可。<br><strong>listen 输入要监听的端口，termux必须修改，否则Permission denied</strong><br><strong>server_name 输入本机IP地址，可以不用改</strong><br>本机IP地址可以在 设置-&gt;WLAN-&gt;已连接WLAN最右边信息&#x2F;更多-&gt;IP地址 找到</p><h1 id="Nginx，启动！"><a href="#Nginx，启动！" class="headerlink" title="Nginx，启动！"></a>Nginx，启动！</h1><h2 id="启动它"><a href="#启动它" class="headerlink" title="启动它"></a>启动它</h2><p>输入以下代码来 Nginx，启动！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/local/nginx/sbin</span><br><span class="line">./nginx</span><br></pre></td></tr></table></figure><p>麻烦可以做个sh脚本然后直接放在自启动里</p><p><strong>让我们来检查 Nginx 是否正常启动</strong><br>检查进程</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root@localhost:/usr/local/nginx/sbin<span class="comment"># ps -ef | grep nginx</span></span><br><span class="line">10442    20535     1  0  2020 ?        00:00:00 nginx: master process ./nginx</span><br><span class="line">10442    20536 20535  0  2020 ?        00:00:00 nginx: worker process</span><br><span class="line">10442    20731  6689  0  2020 stdin    00:00:00 grep --color=auto nginx</span><br><span class="line">root@localhost:/usr/local/nginx/sbin<span class="comment">#</span></span><br></pre></td></tr></table></figure><p>浏览器<br>输入 ip或localhost+端口号 访问<br><img src="https://www.freeimg.cn/i/2024/01/12/65a02666ab34b.jpg" alt="结果如图"><br>Edge还给我调了个深色模式666</p><h2 id="关闭Nginx"><a href="#关闭Nginx" class="headerlink" title="关闭Nginx"></a>关闭Nginx</h2><p>给Nginx进程一个黑手就行</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pkill -9 nginx</span><br></pre></td></tr></table></figure><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>在Termux上安装并部署nginx与真linux的步骤基本一致，这是好的。但是像我这种…笑聋搞痛450和有点lj的配置在安装时确实有点慢…<br>虽然安装较慢，但是启动速度快，和隔壁ksweb有得一拼。<br>你如果要有更多的自由性，那么在termux安装nginx是最流畅最好的免root方案。但如果你不想折腾，那么集成式的ksweb更适合你。<br>写完了，可以睡觉了(明天星期五，喜)<br><img src="https://www.freeimg.cn/i/2024/01/12/65a020d54a40f.gif" alt="摸李这停.gif"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 服务器 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> Termux </tag>
+            
+            <tag> Nginx </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Termux 安装 Hexo 踩的dark坑</title>
+      <link href="/2024/01/03/ken/"/>
+      <url>/2024/01/03/ken/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>当我尝试在 Termux 中利用 Ubuntu22.04.3 发行版去安装 Hexo 时，我已经踩了非常多的坑。<br>我自己比较早的时候就已经试过了，把整个hexo的工作目录复制下来然后放在termux里面。没成功。<br>现在已经成功了，而且非常正常的在我的手机上运行了。<br>接下来我就要说说这tm坑到底有多少</p><p><img src="https://www.freeimg.cn/i/2024/01/03/65954c3a8542a.jpg" alt="Termux 下正常运行的 Hexo"></p><h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><p>其实跟<a href="https://toad114514.github.io/2023/08/18/hexo-dep/">如何使用 Github Pages + Hexo 搭建博客服务器</a>差不多，但是要<strong>先在Termux安装一个装有Proot容器的Linux发行版</strong>，然后再在容器上安装npm、nodejs、git和hexo。当然 Termux 本体的终端也可以运行 npm 等程序，但不过将大大减少稳定性，且还有可能会整出太多的bugs。</p><h2 id="安装-Termux"><a href="#安装-Termux" class="headerlink" title="安装 Termux"></a>安装 Termux</h2><p>先安装 <a href="https://github.com/termux/termux-app">Termux</a> ，点击”termux”后安装最新发行版</p><h2 id="安装-proot-容器"><a href="#安装-proot-容器" class="headerlink" title="安装 proot 容器"></a>安装 proot 容器</h2><p>进入 Termux，等待终端程序安装好后，进入终端，依次输入:</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pkg install proot-distro <span class="comment"># 安装 proot-dsitro</span></span><br><span class="line">proot-distro install ubuntu <span class="comment"># 安装 ubuntu 在 proot 容器内</span></span><br><span class="line">proot-distro login ubuntu <span class="comment"># 登陆 proot 容器内的 ubuntu</span></span><br></pre></td></tr></table></figure><p>这样就可以进入ubuntu了。</p><h2 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h2><p>接下来的操作和 <a href="https://toad114514.github.io/2023/08/18/hexo-dep/">如何使用 Github Pages + Hexo 搭建博客服务器</a>一致。</p><h1 id="坑"><a href="#坑" class="headerlink" title="坑"></a>坑</h1><h2 id="ARM64-下《感人》的运行速度"><a href="#ARM64-下《感人》的运行速度" class="headerlink" title="ARM64 下《感人》的运行速度"></a>ARM64 下《感人》的运行速度</h2><p>要想和上面的图片输出结果一样，就是构建静态页面+上传到Github。<br>根据不知道哪位兄弟记载，对比了hexo和hugo两位生成静态页面的情况。hexo用时十几分钟，<em>这是在 X64 架构下的速度</em>。<strong>如果是 ARM64，时长也许都够我做完我的语文作业了。</strong><br>而且，如果遇到那种主题特别nb的很多功能的主题，那么时长将可以够我把我的三大主科全部做完了(<br>我nm的就逝过一次，主题是butterfly，md差点没给我卡成渣渣辉去一刀999了(bushi</p><h2 id="themes-文件夹限行-fluid-主题"><a href="#themes-文件夹限行-fluid-主题" class="headerlink" title="themes 文件夹限行 fluid 主题"></a>themes 文件夹限行 fluid 主题</h2><p>有一些主题(包括现在用的fluid)，我本来想把主题文件放在themes里面，<strong>但是之后立马报错，不能部署不能创建。</strong>错误大概如下(英文地方已经翻译)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Warn Fluid 推荐你使用推荐设置 (地址)</span><br><span class="line">ERR 有一个地方出现了错误，请查(地址)去修复该错误</span><br><span class="line">错误于 /root/blog/node_modules/@abobe/css-tools/dist/index.mjs</span><br><span class="line">不知道哪一行  option?.<span class="built_in">source</span>), &#125;</span><br><span class="line">错误 那个<span class="string">&quot;.&quot;</span>有错误</span><br></pre></td></tr></table></figure><p>我以为是这个依赖包的问题，后来不是。要换一个安装位置和方法，吃柠檬的。<br>好了，现在换个安装位置也没有用了。</p><h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><p>可以是可是，但是又不可以。这玩意我踩了一堆坑才踩出来的经验。才在termux上面成功的运行了hexo。<br><strong>如果你有能力，建议直接在电脑上安装好了</strong>(像我这样没钱或者叫我爸妈买台电脑肯定藤条的或皮带的就别逝了罢)</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 乱搞 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> termux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>张浩事情速览</title>
+      <link href="/2023/08/19/zh-1/"/>
+      <url>/2023/08/19/zh-1/</url>
+      
+        <content type="html"><![CDATA[<h1 id="张浩黑历史（确信"><a href="#张浩黑历史（确信" class="headerlink" title="张浩黑历史（确信"></a>张浩黑历史（确信</h1><p>让我们从上到下，浏览这些张浩的事情罢</p><h2 id="2022年"><a href="#2022年" class="headerlink" title="2022年"></a>2022年</h2><p>11月左右，偷张浩penis出现<br><br>11月左右，张浩楼道崩溃。<br><br>12月初，张浩和王老虎打架<br><br>12月左右，张浩永远都不来了<br><br>12月底，张浩被3人围圈偷penis<br><br><img src="https://img1.imgtp.com/2023/08/19/670WvzAb.jpg" alt="张浩看李这坤"><br>12月底，张浩大摇大摆<br><br>12月底，张浩和如真瑞打爆小黑子被罚站<br><br><img src="https://img1.imgtp.com/2023/08/19/kHYlHXu5.jpg" alt="张浩和如真瑞罚站"></p><h2 id="2023年"><a href="#2023年" class="headerlink" title="2023年"></a>2023年</h2><p>1月初，张浩Pages诞生<br><br>2月到3月多，张浩沉迷与玩手机<br><br>5月多，张浩帮助张郑与打牌<br><br><img src="https://img1.imgtp.com/2023/08/19/187JVuqv.jpg" alt="张浩帮助张郑与打牌"><br>5月左右，张浩参加里这停马拉松<br><img src="https://img1.imgtp.com/2023/08/19/b57pBJjq.jpg" alt="张浩参加马拉松"><br>5月左右，张浩把李这坤鸟语花香了<br><img src="https://img1.imgtp.com/2023/08/19/OA4LPuCf.jpg" alt="被鸟语花香的李这坤和另外两位"><br>5月中旬，张浩叛变，成为小黑子的一员<br><br>5月中旬，张浩在天悦湾附近休息<br><img src="https://img1.imgtp.com/2023/08/19/YELY4DDU.jpg" alt="张浩和括号哥休息"><br>5月中旬，张浩和两位大佬打牌<br><img src="https://img1.imgtp.com/2023/08/19/ozNT7IzP.jpg" alt="张浩想不共牌，但是被大佬搞爆的张浩"><br>5月底，张浩和如真瑞阻止趁着类偷李这坤penis<br><img src="https://img1.imgtp.com/2023/08/19/YkQCu8vo.jpg" alt="张浩被如真瑞的答案而感到震惊"><br>6月1号，张浩叛变<br><img src="https://img1.imgtp.com/2023/08/19/J27wdvoE.jpg" alt="叛变的张浩和他的朋友"><br>6月1号，张浩被吴子轩称为勇士总冠军<br><br>6月3号，张浩被李这坤偷penis<br><img src="https://img1.imgtp.com/2023/08/19/UKk270eY.jpg" alt="被偷penis的张浩"><br>6月22号，张浩和李这坤一起找李这坤朋友<br><img src="https://img1.imgtp.com/2023/08/19/vGuI7dRT.jpg" alt="张浩骑车"><br>6月底，张浩和李这坤驱赶小孩回家<br><img src="https://img1.imgtp.com/2023/08/19/vuzm0E6o.jpg" alt="被驱赶的其中一位，名闪电马老（粤语）"><br>7月3号，张浩和李括号阻止陈这类偷李这坤penis<br><br>7月初，张浩给李这坤学习猴子<br><img src="https://img1.imgtp.com/2023/08/19/xLJM88vp.jpg" alt="张浩：Near and Monkey to Show and Learn"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 张浩 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 张浩 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何使用 Github Pages + Hexo 搭建博客服务器</title>
+      <link href="/2023/08/18/hexo-dep/"/>
+      <url>/2023/08/18/hexo-dep/</url>
+      
+        <content type="html"><![CDATA[<h1 id="前情提要"><a href="#前情提要" class="headerlink" title="前情提要"></a>前情提要</h1><p>上次在本地搞了搞 Zblog，现在我有github账号，也有了一台临时电脑来部署东西。也是非常的nb好吧</p><h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><ul><li>github账号</li><li>一台电脑</li></ul><h1 id="注册或登录github"><a href="#注册或登录github" class="headerlink" title="注册或登录github"></a>注册或登录github</h1><p>注册一个github账号，要准备邮箱，不要电话号码。没邮箱和SIM卡的可以去注册outlook，有SIM卡就去注册163邮箱。<br><img src="https://img1.imgtp.com/2023/08/19/Hwxp3jGz.png" alt="github 创建仓库"><br>然后创建仓库，点击”New repository”，Repository的框里必须要用username.github.io，username是你的github账号名。然后点击创建即可。</p><p>一般情况下，仓库在创建后就会启用网站，所以这是第一步</p><h1 id="本地部署Hexo"><a href="#本地部署Hexo" class="headerlink" title="本地部署Hexo"></a>本地部署Hexo</h1><h2 id="安装hexo所需要的环境"><a href="#安装hexo所需要的环境" class="headerlink" title="安装hexo所需要的环境"></a>安装hexo所需要的环境</h2><p>去下载并安装nodejs和git。git用于与仓库通信，可以把本地发送到github仓库。nodejs则用来部署hexo。<br><br>安装完成后，先进行检查。打开 Windows powershell 或者 cmd（windows+R打开运行，输入cmd在框里然后回车）里输入以下指令：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nodejs -v</span><br><span class="line">npm -v</span><br></pre></td></tr></table></figure><p>依次输入以上这些指令，如果出现了版本号就证明安装成功。如果其中一个输入后报错或者全部报错，就要重装了。</p><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><p>在安装之前，先创建一个hexo所存放的文件夹，以后写文章什么的都要这个文件夹。名字可以起blog，然后按住shift右键，点击在此处打开命令行窗口，如果没有，请点击在此处打开Powershell窗口。然后输入：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure><p>这一步需要很多时间，请耐心等待。安装完成后就要开始初始化hexo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init blog //这里的blog仅作用于blog里面的blog文件夹</span><br></pre></td></tr></table></figure><p>如果没有出现任何错误，那么恭喜你可能完成了本地安装！</p><h2 id="验证安装"><a href="#验证安装" class="headerlink" title="验证安装"></a>验证安装</h2><p>输入以下命令进行验证：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo new test_post</span><br><span class="line">hexo g</span><br><span class="line">hexo s</span><br></pre></td></tr></table></figure><p>上面命令会在你的博客上创建一个文章用于检测，然后在本地启动服务器进行测试。现在尝试用浏览器访问localhost:4000试试？如果可以正常显示且看见了一个标题为test_post的文章，证明你真的完成了安装hexo！</p><h1 id="初探-Hexo"><a href="#初探-Hexo" class="headerlink" title="初探 Hexo"></a>初探 Hexo</h1><h2 id="学习常用命令"><a href="#学习常用命令" class="headerlink" title="学习常用命令"></a>学习常用命令</h2><p>接下来我们会教你一些hexo常用指令。<br>npm install hexo-cli -g –安装hexo<br>npm update hexo-cli -g –升级<br>hexo init blog –初始化hexo<br>简写命令<br>hexo n &#x3D;&#x3D; hexo new “标题” –在博客上创建文章<br>hexo g &#x3D;&#x3D; hexo generate –创建静态页面<br>hexo s &#x3D;&#x3D; hexo server –启动本地浏览<br>hexo d &#x3D;&#x3D; hexo deploy –部署到远程仓库（指你的github仓库）<br>其他<br>hexo server -s –静态模式<br>hexo server -p 5000 –更改端口，如果发现使用本地预览时出现错误，可以尝试修改端口<br>hexo server -i 192.168.1.1 –修改 IP</p><h2 id="理解配置文件"><a href="#理解配置文件" class="headerlink" title="理解配置文件"></a>理解配置文件</h2><p>在hexo中，配置文件有两种。在hexo根目录里面的_config.yml是网站配置文件。在根目录里面有个theme文件夹，打开后里面是一些文件夹，随便点开一个，里面也有一个_config.yml，这就是主题配置文件</p><h2 id="配置-Hexo"><a href="#配置-Hexo" class="headerlink" title="配置 Hexo"></a>配置 Hexo</h2><p>，找到_config.yml，我们接下来要对他们进行一点点修改。根据下面注释进行修改</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Site</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">Toads</span> <span class="string">Blog</span> <span class="string">//博客标题</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;技术博客、文件分享和张浩&#x27;</span> <span class="string">//博客副标题</span></span><br><span class="line"><span class="attr">description:</span> <span class="string">&#x27;一个一个技术博客&#x27;</span> <span class="string">//博客简介</span></span><br><span class="line"><span class="attr">keywords:</span> <span class="string">Toad114514</span> <span class="string">//博客关键词</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Toad114514</span> <span class="string">//博客作者</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">&#x27;zh-CN&#x27;</span> <span class="string">//Hexo默认语言，请把它修改成&quot;zh-CN&quot;才能把你的博客变成简体中文</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;Asia/Shanghai&#x27;</span> <span class="string">//Hexo默认时区，请修改成&quot;Asia/Shanghai&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># URL</span></span><br><span class="line"><span class="attr">url:</span> <span class="string">https://username.github.io/</span> <span class="string">//hexo默认网站主页，请修改成&quot;https://username.github.io&quot;，其中username是你的github名字</span></span><br></pre></td></tr></table></figure><p>在_config.yml里面还有很多值，按道理来讲，这个文件可以修改大多数原生hexo的值。你可以根据 <a href="https://hexo.io/zh-cn/docs/configuration">Hexo 官方文档</a>  的配置，根据需要进行修改。</p><h1 id="与-Git-连接"><a href="#与-Git-连接" class="headerlink" title="与 Git 连接"></a>与 Git 连接</h1><h2 id="连接到-Github"><a href="#连接到-Github" class="headerlink" title="连接到 Github"></a>连接到 Github</h2><p>下载并安装git，这是 <a href="https://git-scm.com/download">官方下载链接</a>。<br>打开git bash，然后进行配置</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;你注册的github名字&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;你注册github所用的邮箱&quot;</span></span><br></pre></td></tr></table></figure><p>生成一个ssh rsa密钥作为凭证</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&quot;你注册github所用的邮箱&quot;</span></span><br></pre></td></tr></table></figure><p>执行后回车三次即可生成文件<br>然后找到生成的.ssh文件夹（放在了C:\Users\你电脑所登录的用户名，如果看不到就是被隐藏了），找到id_rsa.pub并使用记事本打开，再把里面的内容全部复制。<br><br>回到你的github账号，进入到 <a href="https://github.com/settings/keys">Github SSH密钥管理</a> 链接里，点击 New SSH Key 添加一个ssh密钥<br><img src="https://img1.imgtp.com/2023/08/19/1Ozqm0r5.png" alt="Github 添加 ssh 密钥"><br><br>title随便写，key里面填写你刚复制的密钥，然后点击Add ssh key。这样就完成了。</p><h2 id="验证连接"><a href="#验证连接" class="headerlink" title="验证连接"></a>验证连接</h2><p>打开 git bash，输入以下代码验证连接</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh git@github.com</span><br></pre></td></tr></table></figure><p>如果结果包含以下内容</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi xxx! You<span class="string">&#x27;ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure><p>那么证明你的git已经成功连接到了github</p><h1 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h1><h2 id="配置连接"><a href="#配置连接" class="headerlink" title="配置连接"></a>配置连接</h2><p>来到网站根目录，找到_config.yml，并使用记事本打开，然后翻到最下面，然后把下面的代码写到最下面的地方：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">deploy:</span></span><br><span class="line">  <span class="attr">type:</span> <span class="string">git</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">git@github.com:username/username.github.io.git</span> <span class="string">//这里面的username改成你注册的github账号名</span></span><br><span class="line">  <span class="attr">branch:</span> <span class="string">main</span></span><br></pre></td></tr></table></figure><h2 id="部署到-github"><a href="#部署到-github" class="headerlink" title="部署到 github"></a>部署到 github</h2><p>终于来到了最后一步！！！！！！！！！！你只需要执行以下代码，你的网站就可以部署成功了！</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save //安装git部署插件</span><br><span class="line">hexo g //创建静态页面</span><br><span class="line">hexo d //部署到github</span><br></pre></td></tr></table></figure><p>这样就完成了！</p><h1 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h1><p>完成之后，你可以用浏览器访问 username.github.io（username是你的github账号），如果成功了，那么你的博客就到此完成了！<br><br>先写到这吧，下次讲插件和主题</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 乱搞 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Hexo </tag>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
