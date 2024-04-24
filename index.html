@@ -1,0 +1,216 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Toadsblog - 菜就多写，写不起就别写</title><meta name="author" content="Toad114514"><meta name="copyright" content="Toad114514"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta property="og:type" content="website">
+<meta property="og:title" content="Toadsblog">
+<meta property="og:url" content="http://toad114514.github.io/index.html">
+<meta property="og:site_name" content="Toadsblog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg">
+<meta property="article:author" content="Toad114514">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://toad114514.github.io/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":230,"position":"top","messagePrev":"本文章距离上次更新已经","messageNext":"天，文章部分内容可能和现在有区别。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Toadsblog',
+  isPost: false,
+  isHome: true,
+  isHighlightShrink: true,
+  isToc: false,
+  postUpdate: '2024-04-24 22:39:02'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.2.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header" style="background-image: url('https://img2.imgtp.com/2024/04/24/JZ8fFlnP.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Toadsblog"><img class="site-icon" src="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg"/><span class="site-name">Toadsblog</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Toadsblog</h1><div id="site-subtitle"><span id="subtitle"></span></div><div id="site_social_icons"><a class="social-icon" href="https://github.com/toad114514" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xiaolan2332021@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="post_cover left"><a href="/2024/04/24/new-blog/" title="新的 Toads Blog"><img class="post-bg" src="https://www.freeimg.cn/i/2024/01/03/659508bc68cbc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的 Toads Blog"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/04/24/new-blog/" title="新的 Toads Blog">新的 Toads Blog</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-23T17:25:20.000Z" title="发表于 2024-04-24 01:25:20">2024-04-24</time></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E7%A7%91%E6%8A%80/">科技</a></span></div><div class="content">三个月不见终于变力本次的 Toads Blog 直接使用 butterfly 为主题。原因是fluid主题基本上不能很好的在termu上。
+很多种看我的方式全平台同名toad114514，除开下面所列
+
+B站 狗头均
+抖音 保护狗头de阿巴阿巴鸭当然还有我的 Github 和 Gitee
+
+尽量更新基本保持每周一更，有学业的好吧，且不一定是科技类文章，还有可能是游戏工略等文章。暑假可以多更一点点。
+说完了 睡觉
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/04/23/hello-world/" title="你好逝界">你好逝界</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-04-22T20:15:32.462Z" title="发表于 2024-04-23 04:15:32">2024-04-23</time></span></div><div class="content">欢迎来到 Hexo! 这是你的最早的文章。 点击 文档 查看更多信息. 如果你在使用 Hexo 时出现了 Bugsssssssssss, 你可以在 这里 找到解决方案或者去 GitHub 提交 issues.
+快速失败（不是新建文章1$ hexo new &quot;My New Post&quot;
+
+更多信息请看 写作
+运行服务坤1$ hexo server
+
+更多信息请看: 服务器
+创建静态页面1$ hexo generate
+
+更多信息请看: 创建静态页面
+部署到网站1$ hexo deploy
+
+更多请看: 部署
+</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/01/12/termux-nginx/" title="Teux 搭建 nginx 服务器"><img class="post-bg" src="https://www.freeimg.cn/i/2024/01/12/65a01271aa76d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Teux 搭建 nginx 服务器"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/12/termux-nginx/" title="Teux 搭建 nginx 服务器">Teux 搭建 nginx 服务器</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-11T16:02:24.000Z" title="发表于 2024-01-12 00:02:24">2024-01-12</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/">服务器</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Termux/">Termux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/Nginx/">Nginx</a></span></div><div class="content">前言nginx的风还是吹到了，Termux!不是Termux没明星，而是Termux全明星“”(指装irc等服务器和python等)!不是Termux不出手，而是出手没对手！Termux大舞台，有才你就来(
+今天教你们怎么安装Ngnix！不是ksweb用不起，而是真正的nginx有性价比！原先无root也可以使用的ksweb由于自由度有点差(不能装插件上去)，所以真正的nginx才能真正体验到nginx！
+以后都有这台”战神A5”来部署一些东西了。
+安装依赖应用的安装就像是生猴子，受精卵要在子宫里发育，子宫就是环境，受精卵就是nginx安装包，So：
+1apt install gcc libp ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2024/01/03/ken/" title="Termux 安装 Hexo 踩的dark坑"><img class="post-bg" src="https://www.freeimg.cn/i/2024/01/03/65954c3a8542a.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Termux 安装 Hexo 踩的dark坑"></a></div><div class="recent-post-info"><a class="article-title" href="/2024/01/03/ken/" title="Termux 安装 Hexo 踩的dark坑">Termux 安装 Hexo 踩的dark坑</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2024-01-03T11:49:11.000Z" title="发表于 2024-01-03 19:49:11">2024-01-03</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E4%B9%B1%E6%90%9E/">乱搞</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/termux/">termux</a><span class="article-meta-link">•</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/hexo/">hexo</a></span></div><div class="content">前言当我尝试在 Termux 中利用 Ubuntu22.04.3 发行版去安装 Hexo 时，我已经踩了非常多的坑。我自己比较早的时候就已经试过了，把整个hexo的工作目录复制下来然后放在termux里面。没成功。现在已经成功了，而且非常正常的在我的手机上运行了。接下来我就要说说这tm坑到底有多少
+
+安装其实跟如何使用 Github Pages + Hexo 搭建博客服务器差不多，但是要先在Termux安装一个装有Proot容器的Linux发行版，然后再在容器上安装npm、nodejs、git和hexo。当然 Termux 本体的终端也可以运行 npm 等程序，但不过将大大减少稳定性，且还有可 ...</div></div></div><div class="recent-post-item"><div class="post_cover left"><a href="/2023/08/19/zh-1/" title="张浩事情速览"><img class="post-bg" src="https://img1.imgtp.com/2023/08/19/670WvzAb.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="张浩事情速览"></a></div><div class="recent-post-info"><a class="article-title" href="/2023/08/19/zh-1/" title="张浩事情速览">张浩事情速览</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">发表于</span><time datetime="2023-08-19T13:17:00.000Z" title="发表于 2023-08-19 21:17:00">2023-08-19</time></span><span class="article-meta"><span class="article-meta-separator">|</span><i class="fas fa-inbox"></i><a class="article-meta__categories" href="/categories/%E5%BC%A0%E6%B5%A9/">张浩</a></span><span class="article-meta tags"><span class="article-meta-separator">|</span><i class="fas fa-tag"></i><a class="article-meta__tags" href="/tags/%E5%BC%A0%E6%B5%A9/">张浩</a></span></div><div class="content">张浩黑历史（确信让我们从上到下，浏览这些张浩的事情罢
+2022年11月左右，偷张浩penis出现11月左右，张浩楼道崩溃。12月初，张浩和王老虎打架12月左右，张浩永远都不来了12月底，张浩被3人围圈偷penis12月底，张浩大摇大摆12月底，张浩和如真瑞打爆小黑子被罚站
+2023年1月初，张浩Pages诞生2月到3月多，张浩沉迷与玩手机5月多，张浩帮助张郑与打牌5月左右，张浩参加里这停马拉松5月左右，张浩把李这坤鸟语花香了5月中旬，张浩叛变，成为小黑子的一员5月中旬，张浩在天悦湾附近休息5月中旬，张浩和两位大佬打牌5月底，张浩和如真瑞阻止趁着类偷李这坤penis6月1号，张浩叛变6月1号，张 ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Toad114514</div><div class="author-info__description">你这十分得有九分不对劲</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">9</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/toad114514"><i class="fab fa-github"></i><span>去 Github 找我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/toad114514" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:xiaolan2332021@163.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">browing casco</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/04/24/new-blog/" title="新的 Toads Blog"><img src="https://www.freeimg.cn/i/2024/01/03/659508bc68cbc.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="新的 Toads Blog"/></a><div class="content"><a class="title" href="/2024/04/24/new-blog/" title="新的 Toads Blog">新的 Toads Blog</a><time datetime="2024-04-23T17:25:20.000Z" title="发表于 2024-04-24 01:25:20">2024-04-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/04/23/hello-world/" title="你好逝界">你好逝界</a><time datetime="2024-04-22T20:15:32.462Z" title="发表于 2024-04-23 04:15:32">2024-04-23</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/12/termux-nginx/" title="Teux 搭建 nginx 服务器"><img src="https://www.freeimg.cn/i/2024/01/12/65a01271aa76d.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Teux 搭建 nginx 服务器"/></a><div class="content"><a class="title" href="/2024/01/12/termux-nginx/" title="Teux 搭建 nginx 服务器">Teux 搭建 nginx 服务器</a><time datetime="2024-01-11T16:02:24.000Z" title="发表于 2024-01-12 00:02:24">2024-01-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/01/03/ken/" title="Termux 安装 Hexo 踩的dark坑"><img src="https://www.freeimg.cn/i/2024/01/03/65954c3a8542a.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Termux 安装 Hexo 踩的dark坑"/></a><div class="content"><a class="title" href="/2024/01/03/ken/" title="Termux 安装 Hexo 踩的dark坑">Termux 安装 Hexo 踩的dark坑</a><time datetime="2024-01-03T11:49:11.000Z" title="发表于 2024-01-03 19:49:11">2024-01-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/19/zh-1/" title="张浩事情速览"><img src="https://img1.imgtp.com/2023/08/19/670WvzAb.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="张浩事情速览"/></a><div class="content"><a class="title" href="/2023/08/19/zh-1/" title="张浩事情速览">张浩事情速览</a><time datetime="2023-08-19T13:17:00.000Z" title="发表于 2023-08-19 21:17:00">2023-08-19</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E4%B9%B1%E6%90%9E/"><span class="card-category-list-name">乱搞</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%BC%A0%E6%B5%A9/"><span class="card-category-list-name">张浩</span><span class="card-category-list-count">1</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/"><span class="card-category-list-name">服务器</span><span class="card-category-list-count">1</span></a></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/termux/" style="font-size: 1.1em; color: #999">termux</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/hexo/" style="font-size: 1.5em; color: #99a9bf">hexo</a> <a href="/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/" style="font-size: 1.1em; color: #999">服务器</a> <a href="/tags/Termux/" style="font-size: 1.1em; color: #999">Termux</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a> <a href="/tags/%E7%A7%91%E6%8A%80/" style="font-size: 1.1em; color: #999">科技</a> <a href="/tags/%E5%BC%A0%E6%B5%A9/" style="font-size: 1.1em; color: #999">张浩</a> <a href="/tags/Nginx/" style="font-size: 1.1em; color: #999">Nginx</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/"><span class="card-archive-list-date">2024/04</span><span class="card-archive-list-count">4</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/"><span class="card-archive-list-date">2023/08</span><span class="card-archive-list-count">2</span></a></li></ul></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Toad114514</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">https://img.shields.io/badge/flax-m3_Damn-blue</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>window.typedJSFn = {
+  init: (str) => {
+    window.typed = new Typed('#subtitle', Object.assign({
+      strings: str,
+      startDelay: 300,
+      typeSpeed: 150,
+      loop: true,
+      backSpeed: 50,
+    }, null))
+  },
+  run: (subtitleType) => {
+    if (true) {
+      if (typeof Typed === 'function') {
+        subtitleType()
+      } else {
+        getScript('https://cdn.jsdelivr.net/npm/typed.js@2.1.0/dist/typed.umd.min.js').then(subtitleType)
+      }
+    } else {
+      subtitleType()
+    }
+  }
+}
+</script><script>function subtitleType () {
+  if (true) {
+    typedJSFn.init(["lets a good ways","不是你有什么实力","加纳","stfk damn man","灵魂汁子浇给"])
+  } else {
+    document.getElementById("subtitle").textContent = "lets a good ways"
+  }
+}
+typedJSFn.run(subtitleType)</script></div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="130" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="true" data-text="M3,u服米,Damn" data-fontsize="15px" data-random="true" async="async"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
