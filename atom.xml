@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Toads blog</title>
-  
+  <icon>https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg</icon>
   <subtitle>float code center</subtitle>
   <link href="http://toad114514.github.io/atom.xml" rel="self"/>
   
@@ -60,9 +60,9 @@
     
     
     
-    <category term="科技" scheme="http://toad114514.github.io/tags/%E7%A7%91%E6%8A%80/"/>
-    
     <category term="Hexo" scheme="http://toad114514.github.io/tags/Hexo/"/>
+    
+    <category term="科技" scheme="http://toad114514.github.io/tags/%E7%A7%91%E6%8A%80/"/>
     
   </entry>
   
