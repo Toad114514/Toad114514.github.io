@@ -19,12 +19,12 @@ http://toad114514.github.io/tags/termux/
 http://toad114514.github.io/tags/hexo/
 http://toad114514.github.io/tags/%E6%B8%B8%E6%88%8F/
 http://toad114514.github.io/tags/%E5%85%83%E6%B0%94%E9%AA%91%E5%A3%AB%E5%89%8D%E4%BC%A0/
+http://toad114514.github.io/tags/%E5%BC%A0%E6%B5%A9/
 http://toad114514.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/
 http://toad114514.github.io/tags/Termux/
 http://toad114514.github.io/tags/Nginx/
-http://toad114514.github.io/tags/%E5%BC%A0%E6%B5%A9/
 http://toad114514.github.io/categories/%E7%A7%91%E6%8A%80/
 http://toad114514.github.io/categories/%E6%8A%80%E6%9C%AF/
 http://toad114514.github.io/categories/%E6%B8%B8%E6%88%8F/
-http://toad114514.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/
 http://toad114514.github.io/categories/%E5%BC%A0%E6%B5%A9/
+http://toad114514.github.io/categories/%E6%9C%8D%E5%8A%A1%E5%99%A8/
