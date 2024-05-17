@@ -169,7 +169,7 @@ function showWelcome() {
                         case "深圳市":
                             switch (ipLoacation.result.ad_info.district) {
                                 case "坪山区":
-                                    posdesc = "好巧！博主也在坪山区生活喔~";
+                                    posdesc = "今天你996了嘛";
                                     break;
                                 default:
                                     posdesc = "今天你996了嘛~";
@@ -179,6 +179,9 @@ function showWelcome() {
                         case "阳江市":
                             posdesc = "阳春合水！博主家乡~ 欢迎来玩~";
                             break;
+			case "茂名市":
+		            posdesc = "你真幸运，跟我toad一个城市~";
+			    break;
                         default:
                             posdesc = "来两斤福建人~";
                             break;
@@ -232,24 +235,24 @@ function showWelcome() {
             }
             break;
         default:
-            posdesc = "带我去你的国家逛逛吧";
+            posdesc = "你这是哪里我不知道哇";
             break;
     }
 
     //根据本地时间切换欢迎语
     let timeChange;
     let date = new Date();
-    if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span class='welcome-time'>🌤️ 早上好，一日之计在于晨</span>";
-    else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span class='welcome-time'>☀️ 中午好，记得午休喔~</span>";
-    else if (date.getHours() >= 13 && date.getHours() < 17) timeChange = "<span class='welcome-time'>🕞 下午好，饮茶先啦！</span>";
-    else if (date.getHours() >= 17 && date.getHours() < 19) timeChange = "<span class='welcome-time'>🚶‍♂️ 即将下班，记得按时吃饭~</span>";
-    else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span class='welcome-time'>🌙 晚上好，夜生活嗨起来！</span>";
-    else timeChange = "<span class='welcome-time'>夜深了，早点休息，少熬夜</span>";
+    if (date.getHours() >= 5 && date.getHours() < 11) timeChange = "<span class='welcome-time'>🌤️ 早上好，先去吃早餐哇</span>";
+    else if (date.getHours() >= 11 && date.getHours() < 13) timeChange = "<span class='welcome-time'>☀️ 中午好，起来吃午饭了哇</span>";
+    else if (date.getHours() >= 13 && date.getHours() < 17) timeChange = "<span class='welcome-time'>🕞 下午好，赶紧出去晒一晒</span>";
+    else if (date.getHours() >= 17 && date.getHours() < 19) timeChange = "<span class='welcome-time'>🚶‍♂️ 下班下课回家了哇</span>";
+    else if (date.getHours() >= 19 && date.getHours() < 24) timeChange = "<span class='welcome-time'>🌙 晚上去吃点宵夜罢</span>";
+    else timeChange = "<span class='welcome-time'>我nm，现在都几点了哇，还不去睡觉啊，在不去我就给你打成烧饼哇</span>";
 
     try {
         //自定义文本和需要放的位置
         document.getElementById("welcome-info").innerHTML =
-            `<span>热烈欢迎来自~</span><br><span><span style="color: var(--icat-card-welcome);font-weight: bold;">${pos}</span> 的喵友</span><br><span class="welcome-message">${posdesc}</span><br>您当前位置距博主约 <b><span style="color: var(--icat-card-welcome);font-weight: bold;">${dist}</span></b> 公里！<br><span>您的IP地址为：${ip}</span><br>${timeChange}`;
+            `<span>欢迎~</span><br><span><span style="color: var(--icat-card-welcome);font-weight: bold;">${pos}</span> 的喵友</span><br><span class="welcome-message">${posdesc}</span><br>当前位置距博主约 <b><span style="color: var(--icat-card-welcome);font-weight: bold;">${dist}</span></b> 公里！<br><span>您的IP地址为：${ip}</span><br>${timeChange}`;
     } catch (err) {
         // console.log("Pjax无法获取#welcome-info元素🙄🙄🙄")
     }
