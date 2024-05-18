@@ -13,7 +13,8 @@
   display: inline-flex;
 }
 #welcome-info .welcome-region {
-  background: var(--icat-background);
+  background-image: url("https://img2.imgtp.com/2024/05/18/tptvVwgt.jpg");
+  background-position: right bottom;
   border: var(--style-border);
   color: var(--icat-fontcolor);
   border-radius: 8px;
