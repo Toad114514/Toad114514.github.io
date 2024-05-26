@@ -325,6 +325,20 @@
   </url>
   
   <url>
+    <loc>http://toad114514.github.io/tags/%E7%BD%91%E7%AB%99/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://toad114514.github.io/tags/IRC/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://toad114514.github.io/tags/%E5%BC%A0%E6%B5%A9/</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -332,21 +346,7 @@
   </url>
   
   <url>
-    <loc>http://toad114514.github.io/tags/%E7%A7%91%E6%8A%80/</loc>
-    <lastmod>2024-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://toad114514.github.io/tags/Hexo/</loc>
-    <lastmod>2024-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://toad114514.github.io/tags/hexo/</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -374,7 +374,21 @@
   </url>
   
   <url>
+    <loc>http://toad114514.github.io/tags/hexo/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://toad114514.github.io/tags/linux/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://toad114514.github.io/tags/%E7%A7%91%E6%8A%80/</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -430,6 +444,13 @@
   </url>
   
   <url>
+    <loc>http://toad114514.github.io/tags/SMMWE/</loc>
+    <lastmod>2024-05-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://toad114514.github.io/tags/%E9%9F%B3%E4%B9%90/</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>weekly</changefreq>
@@ -438,13 +459,6 @@
   
   <url>
     <loc>http://toad114514.github.io/tags/OST/</loc>
-    <lastmod>2024-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://toad114514.github.io/tags/SMMWE/</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -506,20 +520,6 @@
     <priority>0.2</priority>
   </url>
   
-  <url>
-    <loc>http://toad114514.github.io/tags/IRC/</loc>
-    <lastmod>2024-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://toad114514.github.io/tags/%E7%BD%91%E7%AB%99/</loc>
-    <lastmod>2024-05-26</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
 
   
   <url>
@@ -537,14 +537,14 @@
   </url>
   
   <url>
-    <loc>http://toad114514.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
+    <loc>http://toad114514.github.io/categories/%E7%A7%91%E6%8A%80/</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>http://toad114514.github.io/categories/%E7%A7%91%E6%8A%80/</loc>
+    <loc>http://toad114514.github.io/categories/%E6%8A%80%E6%9C%AF/</loc>
     <lastmod>2024-05-26</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
