@@ -1,0 +1,353 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>HTML 模板语言 pug 基础语法 | Toads blog</title><meta name="author" content="Toad114514"><meta name="copyright" content="Toad114514"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#212121"><meta name="description" content="如果你想要对Hexo主题进行深度美化，且你要进行深度美化的主题模板引擎使用的就是pug(如butterfly)，则该文章将帮助到你   前言给你的博客美化是博客建站中感觉重要但又可以丢掉的一点，大部分人会给自己的网站添加细节。但网上的Hexo美化还要分主题美化，一些你想要的美化功能只能在其他主题上使用，或者网上的这些美化你不喜欢，想自己整美化，那么本文章将帮助你初步了解pug，帮助你可以快速的在基">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML 模板语言 pug 基础语法">
+<meta property="og:url" content="http://toad114514.github.io/2024/05/15/pug-tuorist/index.html">
+<meta property="og:site_name" content="Toads blog">
+<meta property="og:description" content="如果你想要对Hexo主题进行深度美化，且你要进行深度美化的主题模板引擎使用的就是pug(如butterfly)，则该文章将帮助到你   前言给你的博客美化是博客建站中感觉重要但又可以丢掉的一点，大部分人会给自己的网站添加细节。但网上的Hexo美化还要分主题美化，一些你想要的美化功能只能在其他主题上使用，或者网上的这些美化你不喜欢，想自己整美化，那么本文章将帮助你初步了解pug，帮助你可以快速的在基">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://www.pugjs.cn/img/logo.png">
+<meta property="article:published_time" content="2024-05-15T04:59:47.000Z">
+<meta property="article:modified_time" content="2024-08-15T18:38:32.197Z">
+<meta property="article:author" content="Toad114514">
+<meta property="article:tag" content="pug">
+<meta property="article:tag" content="语言">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://www.pugjs.cn/img/logo.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://toad114514.github.io/2024/05/15/pug-tuorist/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//fonts.googleapis.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.13.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web&amp;display=swap" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":230,"position":"top","messagePrev":"本文章距离上次更新已经","messageNext":"天，文章部分内容可能和现在有区别。"},
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.1/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HTML 模板语言 pug 基础语法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: true,
+  isToc: true,
+  postUpdate: '2024-08-16 02:38:32'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#212121')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#00796d')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/css/font.css"><meta name="generator" content="Hexo 7.2.0"><link rel="alternate" href="/atom.xml" title="Toads blog" type="application/atom+xml">
+</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-home"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/aircom/"><i class="fa-fw fas fa-thermometer-0"></i><span> 空调</span></a></li><li><a class="site-page child" href="/staxle/"><i class="fa-fw fas fa-star"></i><span> Staxle</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-users"></i><span> 交流</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fas fa-rss"></i><span> 网站地图</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://www.pugjs.cn/img/logo.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Toads blog"><img class="site-icon" src="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg"/><span class="site-name">Toads blog</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-home"></i><span> 文章</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></li><li><a class="site-page child" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></li><li><a class="site-page child" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-list"></i><span> 小工具</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/aircom/"><i class="fa-fw fas fa-thermometer-0"></i><span> 空调</span></a></li><li><a class="site-page child" href="/staxle/"><i class="fa-fw fas fa-star"></i><span> Staxle</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 链接</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fas fa-users"></i><span> 交流</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/atom.xml"><i class="fa-fw fas fa-rss"></i><span> RSS</span></a></li><li><a class="site-page child" href="/sitemap.xml"><i class="fa-fw fas fa-rss"></i><span> 网站地图</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HTML 模板语言 pug 基础语法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-05-15T04:59:47.000Z" title="发表于 2024-05-15 12:59:47">2024-05-15</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-08-15T18:38:32.197Z" title="更新于 2024-08-16 02:38:32">2024-08-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E7%A7%91%E6%8A%80%E4%B8%8E%E7%8B%A0%E6%B4%BB/">科技与狠活</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HTML 模板语言 pug 基础语法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="note info simple"><p><strong>如果你想要对Hexo主题进行深度美化，且你要进行深度美化的主题模板引擎使用的就是pug(如butterfly)，则该文章将帮助到你</strong></p>
+</div>
+
+<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>给你的博客美化是博客建站中感觉重要但又可以丢掉的一点，大部分人会给自己的网站添加细节。但网上的Hexo美化还要分主题美化，一些你想要的美化功能只能在其他主题上使用，或者网上的这些美化你不喜欢，想自己整美化，那么本文章将帮助你初步了解pug，帮助你可以快速的在基于pug得主题上美化。</p>
+<h1 id="啥是Pug？"><a href="#啥是Pug？" class="headerlink" title="啥是Pug？"></a>啥是Pug？</h1><blockquote>
+<p>Pug 是一个用 JavaScript 实现的高性能的模板引擎，支持 Node.js 和浏览器运行环境，其灵感来自 Haml 项目。</p>
+</blockquote>
+<h1 id="判断主题是否使用pug"><a href="#判断主题是否使用pug" class="headerlink" title="判断主题是否使用pug"></a>判断主题是否使用pug</h1><p>在一些主题上会用到pug。但不是完全。<br>打开如下文件夹：<br>直接存放在themes文件夹</p>
+<blockquote>
+<p>博客根目录&#x2F;themes&#x2F;主题名&#x2F;layout<br>npm方式安装<br>博客根目录&#x2F;node_modules&#x2F;hexo-theme-主题名&#x2F;layout<br>如果发现该文件夹内文件后缀名为.pug，则该主题使用了pug。</p>
+</blockquote>
+<h1 id="安装pug"><a href="#安装pug" class="headerlink" title="安装pug"></a>安装pug</h1><p>npm</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install pug</span><br></pre></td></tr></table></figure>
+<p>pug 命令行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm install pug-cli -g</span><br><span class="line"><span class="comment"># 查看安装情况</span></span><br><span class="line"><span class="comment"># 没找到命令请使用 npx pug --help</span></span><br><span class="line">pug --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<p>一般情况下，pug在安装主题时便已安装完成。</p>
+<h1 id="基础语法"><a href="#基础语法" class="headerlink" title="基础语法"></a>基础语法</h1><h2 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a(href=&quot;toad114514.github.io&quot;)</span><br><span class="line">|</span><br><span class="line">|</span><br><span class="line">a(href=&quot;#&quot;)</span><br></pre></td></tr></table></figure>
+<p>标签属性和 html 类似，但其实是 js 的普通表达式。允许使用逗号作为属性分隔符，不加也可以。<br><strong>本页所有事例中包括管道符号”|”的行都用于控制空格上</strong><br>支持所有 js 表达式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">//- 已登录</span><br><span class="line">- var authenticated = true</span><br><span class="line">body(class=authenticated ? &#x27;authed&#x27; : &#x27;anon&#x27;)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">iframe(</span><br><span class="line">  scr=&quot;#&quot;</span><br><span class="line">  width=&quot;150&quot;</span><br><span class="line">  height=&quot;150&quot;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<p>pug允许把属性分多行编写。</p>
+<p>如果属性里有特殊字符，且和 js 语法产生冲突，则需要用 “” 或 ‘’ 括起来</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">div(class=&quot;my-class&quot; &quot;(click)&quot;=&quot;get()&quot;)</span><br></pre></td></tr></table></figure>
+
+<p>如果想要在属性中使用变量，则可以使用js写属性</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- var url = &#x27;pug-test.html&#x27;;</span><br><span class="line">a(href=&#x27;/&#x27; + url) 链接</span><br><span class="line">|</span><br><span class="line">|</span><br><span class="line">- url = &#x27;https://example.com/&#x27;</span><br><span class="line">a(href=url) 另一个链接</span><br></pre></td></tr></table></figure>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>case 属于 js 的 switch 缩写，接受如下形式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">- var num = 5</span><br><span class="line">case num</span><br><span class="line">  when 3</span><br><span class="line">    p 数字是5</span><br><span class="line">  when 5</span><br><span class="line">    p 数字是5</span><br><span class="line">  default</span><br><span class="line">    p 数字是 $(num)</span><br></pre></td></tr></table></figure>
+<p>可以像js一样使用分支传递</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">case num</span><br><span class="line">  when 3</span><br><span class="line">  when 5</span><br><span class="line">    p 数字应该是3或5</span><br></pre></td></tr></table></figure>
+<p>不想输出任何东西，可以明确性的加上break语句</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">case num</span><br><span class="line">  when 3</span><br><span class="line">    - break</span><br></pre></td></tr></table></figure>
+<p>可以使用块展开的语法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">- var num = 5</span><br><span class="line">case num</span><br><span class="line">  when 3: p 数字是3</span><br><span class="line">  when 5: p 数字是5</span><br><span class="line">  default: p 数字是 $(num)</span><br></pre></td></tr></table></figure>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><p>pug提供了在模板中嵌入js代码的可能<br>不输出的代码<br>使用 “-“ 开始一段不输出的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- for (var i = 0; i &lt; 5; i++)</span><br><span class="line">  li $(i)</span><br></pre></td></tr></table></figure>
+<p>带输出的代码<br>使用 “&#x3D;” 开始一段带输出的代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p</span><br><span class="line">  = &quot;&lt;转义&gt; 的代码&quot;</span><br><span class="line">// 行内形式</span><br><span class="line">p= &quot;&lt;转义&gt; 的代码&quot;</span><br></pre></td></tr></table></figure>
+<p>不转义的带输出代码</p>
+<div class="note danger simple"><p><strong>不安全警告</strong><br>未转义的字符输出<strong>是危险的</strong>，可能导致<strong>跨站脚本攻击</strong></p>
+</div>
+<p>用 “!&#x3D;” 开始一段未转义的带输出字符</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">p </span><br><span class="line"> != &quot;&lt;strong&gt;没转义&lt;/strong&gt;的代码&quot;</span><br><span class="line">// 行内形式</span><br><span class="line">p!= &quot;&lt;strong&gt;没转义&lt;/strong&gt;&quot; + &quot;的代码&quot;</span><br></pre></td></tr></table></figure>
+<h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>带输出的注释和js注释一样，它们类似标签，能生成对应的html注释，而且必须单独一行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// legacy</span><br><span class="line">p good</span><br><span class="line">p 牢大我想你了</span><br></pre></td></tr></table></figure>
+<p>也有不输出的注释，在后期html渲染时不会出现对应的注释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//- 仅存在于pug模板中的注释</span><br><span class="line">p man</span><br><span class="line">p whatcanisay</span><br><span class="line">p manbaout</span><br></pre></td></tr></table></figure>
+<p>一个正常的块注释如下</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">body</span><br><span class="line">  //- </span><br><span class="line">    这里注释后期</span><br><span class="line">    不会生成对应的html注释</span><br><span class="line">    写多少字都行</span><br><span class="line">    凉屋赶紧加强黑骑</span><br><span class="line">  //</span><br><span class="line">    这里注释</span><br><span class="line">    后期会生成对应的html注释</span><br><span class="line">    怎么写都行</span><br><span class="line">    张浩没只因</span><br></pre></td></tr></table></figure>
+<p>条件注释<br>用于分辨新老ie浏览器的特殊标识，允许直接写html风格的注释</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">doctype html</span><br><span class="line">&lt;!--[if IE 8]&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot; class=&quot;lt-ie9&quot;&gt;</span><br><span class="line">&lt;![endif]--&gt;</span><br><span class="line">&lt;!--[if gt IE 8]&gt;&lt;!--&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;!--&lt;![endif]--&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="条件"><a href="#条件" class="headerlink" title="条件"></a>条件</h2><p>pug条件判断的一般形式的括号是可选的，所以其实可以省略开头的 “-“，效果完全相同，类似一个常规js语法形式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- var manba = ( msg: &quot;out&quot; )</span><br><span class="line">- var uncomment = true</span><br><span class="line">#user</span><br><span class="line">  if manba.msg</span><br><span class="line">    h2.yellow manba</span><br><span class="line">    p.msg= manba.msg</span><br><span class="line">  else if uncomment</span><br><span class="line">    h2.blue 消息</span><br><span class="line">    p.msg 没有添加消息</span><br><span class="line">  else</span><br><span class="line">    h2.red 消息</span><br><span class="line">    没消息</span><br></pre></td></tr></table></figure>
+<p>oug同样提供反义版本 “unless”</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">\\\\\\\\\\ a.pug &lt;</span><br><span class="line">unless user.isAnonymous</span><br><span class="line">  p 您已经以 #&#123;user.name&#125; 的身份登录。</span><br><span class="line">\\\\\\\\\\ b.pug &gt;</span><br><span class="line">if !user.isAnonymous</span><br><span class="line">  p 您已经以 #&#123;user.name&#125; 的身份登录。</span><br></pre></td></tr></table></figure>
+<h2 id="包含"><a href="#包含" class="headerlink" title="包含"></a>包含</h2><p>包含允许你把另外的内容插入进来<br>main.pug</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">doctype html</span><br><span class="line">html</span><br><span class="line">  include inc/head.pug</span><br><span class="line">  body</span><br><span class="line">    p 欢迎</span><br><span class="line">    p.manba 牢大我想你了</span><br><span class="line">    include inc/manba.pug</span><br><span class="line">    include inc/foot.pug</span><br></pre></td></tr></table></figure>
+<p>head.pug</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">head</span><br><span class="line">  title 扣1复活牢大</span><br><span class="line">  script(src=&quot;/js/manba.js&quot;)</span><br></pre></td></tr></table></figure>
+<p>manba.pug</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">img(src=&quot;/img/laoda.jpg&quot;)</span><br><span class="line">p.red 肘击24次只为纪念牢大</span><br></pre></td></tr></table></figure>
+<p>foot.pug</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">footer</span><br><span class="line">  p give my like star kobe branyt</span><br></pre></td></tr></table></figure>
+<h2 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h2><p>pug允许使用 block 和 extends 关键字进行模板继承<br>layout.pug 文件</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">doctype html</span><br><span class="line">html</span><br><span class="line">  head</span><br><span class="line">    title 我要把凉屋炸了</span><br><span class="line">    block script</span><br><span class="line">    script(src=&quot;js/liangwu.js&quot;)</span><br><span class="line">  body</span><br><span class="line">    block content</span><br><span class="line">    block foot</span><br><span class="line">      #footer</span><br><span class="line">        p 炸凉屋时间！</span><br></pre></td></tr></table></figure>
+<p>扩展布局时，只需要在新的文件里使用 extends 指出被继承的模板路径即可<br>现在可以定义诺干个新块去覆盖父模板的父块<br>ext.pug 文件里面</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">extends layout.pug</span><br><span class="line"></span><br><span class="line">block script</span><br><span class="line">  script(src=&quot;js/zha.js&quot;)</span><br><span class="line">block content</span><br><span class="line">   h1 炸</span><br><span class="line">   p 炸凉屋</span><br><span class="line">   - var ways = [&quot;小猫牢底&quot;, &quot;PS5&quot;, &quot;统帅力&quot;]</span><br><span class="line">   p 你可以用以下方法来炸凉屋</span><br><span class="line">   each waysnum in ways</span><br><span class="line">     p= waysnum</span><br></pre></td></tr></table></figure>
+<p>如下例子，content暴露出了”zha”和”zhuka”两个新块用于扩展。当然，子模块也可以把整个content覆盖。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">block content</span><br><span class="line">  .zha</span><br><span class="line">    block zha</span><br><span class="line">      p 没有任何东西</span><br><span class="line">  .zhuka</span><br><span class="line">    block zhuka</span><br><span class="line">      i 把凉屋炸了</span><br></pre></td></tr></table></figure>
+<p>如果仅仅简单填一些东西上去而不是覆盖，这时便可使用 append &#x2F; prepend。<br>append 在尾部部添加内容<br>prepend 在头部添加内容<br>如果你想要额外添砖加瓦，而不是推平重来，则可以这样做</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">block append head</span><br><span class="line">  sxript(src=&quot;zhuka.js&quot;)</span><br></pre></td></tr></table></figure>
+<p>在有 append 或 prepend 情况下，可以将 block 省略</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">append head</span><br><span class="line">  script(src=&quot;zhuka.js&quot;)</span><br></pre></td></tr></table></figure>
+<h2 id="嵌入"><a href="#嵌入" class="headerlink" title="嵌入"></a>嵌入</h2><p>pug提供多种嵌入方式</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">- var title = &quot;local boradcast 24.5.16&quot;</span><br><span class="line">- var authon = &quot;fimright-lztv&quot;</span><br><span class="line">- var zy = &quot;&lt;span&gt;温度 27 度&lt;/span&gt;&quot;</span><br><span class="line">h1= title</span><br><span class="line">p #(authon) 制作</span><br><span class="line">p 今日 #(zy)</span><br></pre></td></tr></table></figure>
+<p>不仅可以嵌入js，也可以嵌入pug书写的标签</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">p.</span><br><span class="line">  这是一个很长很长而且还很无聊的段落，还没有结束，是的，非常非常地长。</span><br><span class="line">  突然出现了一个 #[strong 充满力量感的单词]，这确实让人难以 #[em 忽视]。</span><br><span class="line">p.</span><br><span class="line">  使用带属性的嵌入标签的例子：</span><br><span class="line">  #[q(lang=&quot;es&quot;) ¡Hola Mundo!]</span><br></pre></td></tr></table></figure>
+<h2 id="迭代-循环"><a href="#迭代-循环" class="headerlink" title="迭代(循环)"></a>迭代(循环)</h2><p>pug提供了两种迭代方案，each 和 while<br>each迭代<br>pug的头等迭代方式，让你在模板中迭代数据和对象更方便</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul</span><br><span class="line">  each num in [1, 2, 3, 4, 5]</span><br><span class="line">    li 第 #(num) 个 列表</span><br></pre></td></tr></table></figure>
+<p>允许在迭代是获得索引值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul</span><br><span class="line">  each num, index in [&quot;祖卡&quot;, &quot;分裂&quot;, &quot;美杜莎法袍&quot;]</span><br><span class="line">    li= index + &quot;:&quot; + num</span><br></pre></td></tr></table></figure>
+<p>同时，也允许获取键值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">ul</span><br><span class="line">  each num, index in &#123;1:&quot;祖卡&quot;, 2:&quot;分裂&quot;, 3:&quot;美杜莎法袍&quot;&#125;</span><br><span class="line">    li= index + &quot;:&quot; + num</span><br></pre></td></tr></table></figure>
+<p>while 循环<br>利用 while 创建一个循环</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">- var i = 0</span><br><span class="line">ul</span><br><span class="line">  while i &lt; 4</span><br><span class="line">    li= i++</span><br></pre></td></tr></table></figure>
+<h2 id="混入"><a href="#混入" class="headerlink" title="混入"></a>混入</h2><p>混用允许你在pug中重复使用一整个代码块的方法</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//-定义</span><br><span class="line">mixin list</span><br><span class="line">  ul </span><br><span class="line">    li a</span><br><span class="line">    li b</span><br><span class="line">  p lioMessy</span><br><span class="line">//- 使用</span><br><span class="line">+list</span><br><span class="line">p useItAgain</span><br><span class="line">+list</span><br></pre></td></tr></table></figure>
+<p>允许传递函数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">mixin brofk(num)</span><br><span class="line">  li.fk= &quot;fk&quot; + num</span><br><span class="line">ul</span><br><span class="line">  +brofk&#123;1&#125;</span><br><span class="line">  +brofk(996)</span><br><span class="line">  +brofk(114514)</span><br></pre></td></tr></table></figure>
+
+<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>由于学业等问题，本文章并未写完。<br>本文章将会在1-2天内写完</p>
+<p>现在，你懂了吗？</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://toad114514.github.io">Toad114514</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://toad114514.github.io/2024/05/15/pug-tuorist/">http://toad114514.github.io/2024/05/15/pug-tuorist/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://toad114514.github.io" target="_blank">Toads blog</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/pug/">pug</a><a class="post-meta__tags" href="/tags/%E8%AF%AD%E8%A8%80/">语言</a></div><div class="post_share"><div class="social-share" data-image="https://www.pugjs.cn/img/logo.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="utterances-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://img2.imgtp.com/2024/04/24/ObfDQpBe.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Toad114514</div><div class="author-info__description">一览众山小</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">33</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/toad114514"><i class="fab fa-github"></i><span>去 Github Q我</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/toad114514" target="_blank" title="Github"><i class="iconfont icon-github-fill" style="color: #ffffff;"></i></a><a class="social-icon" href="mailto:xiaolan2332021@163.com" target="_blank" title="Email"><i class="iconfont icon-youxiang" style="color: #ffffff;"></i></a><a class="social-icon" href="/atom.xml" target="_blank" title="RSS"><i class="iconfont icon-rss" style="color: #ffffff;"></i></a><a class="social-icon" href="https://qm.qq.com/q/fvejngFkFa" target="_blank" title="QQ"><i class="iconfont icon-qq" style="color: #ffffff;"></i></a><a class="social-icon" href="https://v.kuaishou.com/zXZbbw" target="_blank" title="Kuaishou"><i class="iconfont icon-kuaishou" style="color: #ffffff;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">现在本人一般10天内更新新文章，如果没有请尝试查看本站 RSS 订阅或清除浏览器记录，还是没有就是可能我有一段不想写了</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%95%A5%E6%98%AFPug%EF%BC%9F"><span class="toc-number">2.</span> <span class="toc-text">啥是Pug？</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%88%A4%E6%96%AD%E4%B8%BB%E9%A2%98%E6%98%AF%E5%90%A6%E4%BD%BF%E7%94%A8pug"><span class="toc-number">3.</span> <span class="toc-text">判断主题是否使用pug</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85pug"><span class="toc-number">4.</span> <span class="toc-text">安装pug</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95"><span class="toc-number">5.</span> <span class="toc-text">基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%9E%E6%80%A7"><span class="toc-number">5.1.</span> <span class="toc-text">属性</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%94%AF"><span class="toc-number">5.2.</span> <span class="toc-text">分支</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A3%E7%A0%81"><span class="toc-number">5.3.</span> <span class="toc-text">代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">5.4.</span> <span class="toc-text">注释</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A1%E4%BB%B6"><span class="toc-number">5.5.</span> <span class="toc-text">条件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8C%85%E5%90%AB"><span class="toc-number">5.6.</span> <span class="toc-text">包含</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%A7%E6%89%BF"><span class="toc-number">5.7.</span> <span class="toc-text">继承</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B5%8C%E5%85%A5"><span class="toc-number">5.8.</span> <span class="toc-text">嵌入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%BF%AD%E4%BB%A3-%E5%BE%AA%E7%8E%AF"><span class="toc-number">5.9.</span> <span class="toc-text">迭代(循环)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%B7%E5%85%A5"><span class="toc-number">5.10.</span> <span class="toc-text">混入</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%BB%93%E6%9D%9F"><span class="toc-number">6.</span> <span class="toc-text">结束</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/16/hello-world/" title="你好逝界">你好逝界</a><time datetime="2024-08-15T18:38:32.187Z" title="发表于 2024-08-16 02:38:32">2024-08-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/26/apache2-ins/" title="Apache2 完整安装指导"><img src="https://img2.imgtp.com/2024/05/26/6tRLj5NF.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Apache2 完整安装指导"/></a><div class="content"><a class="title" href="/2024/05/26/apache2-ins/" title="Apache2 完整安装指导">Apache2 完整安装指导</a><time datetime="2024-05-26T15:02:25.000Z" title="发表于 2024-05-26 23:02:25">2024-05-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2024/05/24/kolibrios-try/" title="体验纯汇编系统 KolibriOS"><img src="https://img2.imgtp.com/2024/05/27/iSzNaOsS.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="体验纯汇编系统 KolibriOS"/></a><div class="content"><a class="title" href="/2024/05/24/kolibrios-try/" title="体验纯汇编系统 KolibriOS">体验纯汇编系统 KolibriOS</a><time datetime="2024-05-23T18:30:42.000Z" title="发表于 2024-05-24 02:30:42">2024-05-24</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://img2.imgtp.com/2024/05/11/MZFhper9.png')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2024 By Toad114514</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text"><img src="https://img.shields.io/badge/flax_for-door_36-blue"></img><br><span id="busuanzi_container_site_uv">本站 总共被 <span id="busuanzi_value_site_uv"></span> 个人</span><span id="busuanzi_container_site_pv">一起访问了 <span id="busuanzi_value_site_pv"></span> 次</span><p>很喜欢鹰眼的一句话：我的眼睛就是尺！<p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.13.0"></script><script src="/js/main.js?v=4.13.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.33/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const loadUtterances = () => {
+    let ele = document.createElement('script')
+    ele.id = 'utterances_comment'
+    ele.src = 'https://utteranc.es/client.js'
+    ele.setAttribute('repo', 'Toad114514.github.io')
+    ele.setAttribute('issue-term', 'pathname')
+    const nowTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'photon-dark' : 'github-light'
+    ele.setAttribute('theme', nowTheme)
+    ele.crossOrigin = 'anonymous'
+    ele.async = true
+    document.getElementById('utterances-wrap').appendChild(ele)
+  }
+
+  const utterancesTheme = theme => {
+    const iframe = document.querySelector('.utterances-frame')
+    if (iframe) {
+      const theme = theme === 'dark' ? 'photon-dark' : 'github-light'
+      const message = {
+        type: 'set-theme',
+        theme: theme
+      };
+      iframe.contentWindow.postMessage(message, 'https://utteranc.es');
+    }
+  }
+
+  btf.addGlobalFn('themeChange', utterancesTheme, 'utterances')
+
+  if ('Utterances' === 'Utterances' || !true) {
+    if (true) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
+    else loadUtterances()
+  } else {
+    window.loadOtherComment = loadUtterances
+  }
+})()</script></div><script async src="http://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://toad114514.github.io/js/txmap.js"></script><script src="https://toad114514.github.io/js/funtit.js"></script><div class="aplayer no-destroy" data-id="9936732173" data-server="netease" data-type="playlist" data-fixed="true" data-autoplay="true" data-lrcType="-1"> </div><script defer="defer" id="ribbon" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/canvas-ribbon.min.js" size="130" alpha="0.6" zIndex="-1" mobile="false" data-click="false"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/dist/click-show-text.min.js" data-mobile="true" data-text="M3,u服米,Damn" data-fontsize="15px" data-random="true" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/metingjs/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax@0.2.8/pjax.min.js"></script><script>let pjaxSelectors = ["link[rel=\"canonical\"]","meta[property=\"og:image\"]","meta[property=\"og:title\"]","meta[property=\"og:url\"]","head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.13.0"></script></div></div></body></html>
