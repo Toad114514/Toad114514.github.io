@@ -1,6 +1,6 @@
 http://toad114514.github.io/2024/08/20/termux-all/
-http://toad114514.github.io/america/index.html
 http://toad114514.github.io/america/index_en.html
+http://toad114514.github.io/america/index.html
 http://toad114514.github.io/aircom/index.html
 http://toad114514.github.io/2023/07/02/blog-new-rad/
 http://toad114514.github.io/2023/07/17/change-web-style/
